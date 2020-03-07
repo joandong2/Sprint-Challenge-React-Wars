@@ -1,5 +1,4 @@
 import React from "react";
-import { Col } from "reactstrap";
 import "./StarWars.css";
 import { Button } from "reactstrap";
 

@@ -6,7 +6,7 @@ const People = (props) => {
     return (
         <Col md="3">
             <div className="people-card">
-                <h3>{props.name}</h3>
+                <h4>{props.name}</h4>
                 <p>
                     Birth: {props.birth_year}, {props.gender}
                 </p>

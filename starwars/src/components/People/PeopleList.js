@@ -14,7 +14,7 @@ const PeopleList = () => {
         axios
             .get(`https://swapi.co/api/people/?page=${pageCount}`)
             .then((response) => {
-                console.log(response.data);
+                //console.log(response.data);
                 setTotalPageCount(
                     (Math.ceil(response.data.count / 10) * 10) / 10
                 );
@@ -24,27 +24,28 @@ const PeopleList = () => {
     }, [pageCount]);
 
     const setClickCount = (e) => {
-        console.log(e.target.getAttribute("data-id"));
         setPageCount(e.target.getAttribute("data-id"));
     };
 
     return (
-        <div class="main-container">
+        <div className="main-container">
             <Container>
                 <Row>
                     {data.map((item, i) => {
+                        //console.log(item.films);
                         return (
-                            <People
-                                key={i}
-                                name={item.name}
-                                birth_year={item.birth_year}
-                                gender={item.gender}
-                                height={item.height}
-                                mass={item.mass}
-                                hair_color={item.hair_color}
-                                skin_color={item.skin_color}
-                                eye_color={item.eye_color}
-                            />
+                            // <People
+                            //     key={i}
+                            //     name={item.name}
+                            //     birth_year={item.birth_year}
+                            //     gender={item.gender}
+                            //     height={item.height}
+                            //     mass={item.mass}
+                            //     hair_color={item.hair_color}
+                            //     skin_color={item.skin_color}
+                            //     eye_color={item.eye_color}
+                            // />
+                            <People person={item} key={i} />
                         );
                     })}
                 </Row>

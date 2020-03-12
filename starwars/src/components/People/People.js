@@ -8,7 +8,7 @@ const People = (props) => {
     //console.log(props);
 
     return (
-        <Col md="3">
+        <Col md="2">
             <div className="people-card">
                 <h4>{props.person.name}</h4>
                 <p>
@@ -25,8 +25,9 @@ const People = (props) => {
                     <br />
                     <span>Eye Color: {props.person.eye_color}</span>
                 </div>
+                <hr />
                 <div className="movie-lists">
-                    <Movies data={props.person} />
+                    <Movies data={props.person} key={props.person.name} />
                 </div>
             </div>
         </Col>

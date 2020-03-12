@@ -14,13 +14,13 @@ const Movies = (props) => {
                 setMovies(response);
             })
             .catch((err) => console.log(err));
-    }, []);
+    }, [props.data.films]);
 
     return (
         <div>
             {movies.map((film) => {
                 // console.log('filmsarray map', film)
-                return <li>{film.data.title}</li>;
+                return <li key={film.data.title}>{film.data.title}</li>;
             })}
         </div>
     );

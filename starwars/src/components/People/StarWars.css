@@ -1,0 +1,26 @@
+.people-card {
+    background-color: white;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container:last-child {
+    padding-left: 30px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.people-card .people-info {
+    font-size: 0.9rem;
+}
